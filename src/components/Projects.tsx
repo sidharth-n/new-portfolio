@@ -19,8 +19,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       title: "SANTACALLINGAI",
       description:
         "Voice-enabled AI Santa Claus experience with real-time conversation capabilities. Created a magical experience for children while showcasing advanced voice AI technology.",
-      image:
-        "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=800&q=80",
+      image: "/images/santacallingai.webp",
       tech: ["React", "WebRTC", "TailwindCSS", "Voice AI"],
       metrics: ["55K views", "20K visitors", "15+ countries"],
       timeline: "Dec 2024",
@@ -30,8 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       title: "VOAIZ.COM",
       description:
         "B2B AI voice agent platform for sales and support teams, customizable with company data for tailored customer interactions. Features real-time response generation and analytics dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      image: "/images/voaiz.webp",
       tech: ["React", "Three.js", "NLP", "Voice AI"],
       metrics: ["Enterprise Ready", "Custom Training"],
       timeline: "2024 - Ongoing",
@@ -41,19 +39,17 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       title: "OUTFITIFAI",
       description:
         "AI-powered virtual try-on platform for fashion retailers with high-accuracy garment visualization. Helps customers preview clothing items on their body type before purchasing.",
-      image:
-        "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80",
+      image: "/images/outfitifai.webp",
       tech: ["Three.js", "React", "AI Image Processing"],
       metrics: ["Multiple Retailers", "99% Size Accuracy"],
       timeline: "2024 - Ongoing",
       links: { github: "#", live: "#" },
     },
     {
-      title: "3D VIRTUAL CONVERSATIONAL AI BOT",
+      title: "ANDROID KUNJAPPAN",
       description:
-        "Immersive 3D virtual assistant with real-time NLP capabilities and expressive animations. Responds to user queries with natural language and appropriate facial expressions.",
-      image:
-        "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=800&q=80",
+        "Immersive 3D virtual assistant with real-time NLP capabilities. Responds to user queries with natural language. Inspired by the movie 'Android Kunjappan'",
+      image: "/images/kunjappan.webp",
       tech: ["Three.js", "React Three Fiber", "NLP"],
       metrics: ["Real-time NLP", "3D Animation"],
       timeline: "2022",
@@ -63,8 +59,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       title: "ROASTYOURFRIEND",
       description:
         "AI voice agent for interactive calls with personality-based humor. Creates personalized roast experiences based on user inputs and conversation context.",
-      image:
-        "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=800&q=80",
+      image: "/images/ryf.webp",
       tech: ["React", "Voice AI", "WebRTC", "TailwindCSS"],
       metrics: ["8,000+ users in one week", "GTA-inspired UX"],
       timeline: "2024",
@@ -74,8 +69,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       title: "TALKTOJESUS",
       description:
         "Bible-based AI voice interaction platform thoughtfully designed to respect religious sensitivities. Provides guidance and spiritual insights based on biblical teachings.",
-      image:
-        "https://images.unsplash.com/photo-1529880779423-a2dd3a6a decoded5e5d?auto=format&fit=crop&w=800&q=80",
+      image: "/images/jesus.webp",
       tech: ["React", "Voice AI", "Scripture API", "TailwindCSS"],
       metrics: ["Faith-based guidance", "Biblical accuracy"],
       timeline: "2024",
