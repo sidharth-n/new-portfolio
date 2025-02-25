@@ -23,7 +23,7 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
         "Architected front-end systems for an AI video generation platform with enterprise clients including Flipkart and Housing.com",
         "Built reusable components with React and Tailwind CSS, reducing development time by 30% for new features",
         "Implemented Three.js visualizations that increased user engagement by 25% across platform",
-        "Collaborated with AI engineers to optimize real-time video generation performance by 20%",
+
         "Led cross-functional teams to deliver high-impact features on aggressive timelines",
       ],
     },
@@ -35,7 +35,16 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
         "Analyzed business operations and implemented data-driven improvement strategies across departments",
         "Led Amazon sales department, creating and executing digital marketing campaigns that increased online revenue by 35%",
         "Developed and marketed new hydroponic systems that expanded market reach across India",
-        "Coordinated farming operations in Punjab, improving production efficiency by 15%",
+      ],
+    },
+    {
+      company: "MYPUP COMMUNITY",
+      role: "Co-founder",
+      period: "Apr 2020 - Jun 2021",
+      achievements: [
+        "Created a worldwide platform connecting passionate individuals with industry experts",
+        "Conducted online industry-level workshops for students in various fields",
+        "Built a community of over 5,000 members across india",
       ],
     },
     {

@@ -23,7 +23,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
         "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=800&q=80",
       tech: ["React", "WebRTC", "TailwindCSS", "Voice AI"],
       metrics: ["55K views", "20K visitors", "15+ countries"],
-      timeline: "Dec 2023",
+      timeline: "Dec 2024",
       links: { github: "#", live: "https://santacallingai.com" },
     },
     {
@@ -45,7 +45,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
         "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80",
       tech: ["Three.js", "React", "AI Image Processing"],
       metrics: ["Multiple Retailers", "99% Size Accuracy"],
-      timeline: "2023 - Ongoing",
+      timeline: "2024 - Ongoing",
       links: { github: "#", live: "#" },
     },
     {
@@ -60,15 +60,26 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       links: { github: "#", live: "#" },
     },
     {
-      title: "AI YOUTUBE SHORTS CREATOR",
+      title: "ROASTYOURFRIEND",
       description:
-        "Automated tool for generating short-form video content optimized for social media engagement. Transforms long-form content into bite-sized, attention-grabbing clips.",
+        "AI voice agent for interactive calls with personality-based humor. Creates personalized roast experiences based on user inputs and conversation context.",
       image:
-        "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80",
-      tech: ["Remotion", "React", "Content AI"],
-      metrics: ["Automation", "High Engagement"],
-      timeline: "2023",
-      links: { github: "#", live: "#" },
+        "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=800&q=80",
+      tech: ["React", "Voice AI", "WebRTC", "TailwindCSS"],
+      metrics: ["8,000+ users in one week", "GTA-inspired UX"],
+      timeline: "2024",
+      links: { github: "#", live: "https://roast2-0.vercel.app" },
+    },
+    {
+      title: "TALKTOJESUS",
+      description:
+        "Bible-based AI voice interaction platform thoughtfully designed to respect religious sensitivities. Provides guidance and spiritual insights based on biblical teachings.",
+      image:
+        "https://images.unsplash.com/photo-1529880779423-a2dd3a6a decoded5e5d?auto=format&fit=crop&w=800&q=80",
+      tech: ["React", "Voice AI", "Scripture API", "TailwindCSS"],
+      metrics: ["Faith-based guidance", "Biblical accuracy"],
+      timeline: "2024",
+      links: { github: "#", live: "https://talktojesus.vercel.app" },
     },
   ]
 

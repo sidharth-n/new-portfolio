@@ -84,7 +84,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
                 { prefix: "", value: 20, suffix: "+", label: "Countries" },
                 {
                   prefix: "",
-                  value: 5,
+                  value: 7,
                   suffix: "",
                   label: "AI Products Launched",
                 },

@@ -16,7 +16,7 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+  const [ref, inView] = useInView({ threshold: 0.5 })
 
   React.useEffect(() => {
     if (inView) setActiveSection("contact")
@@ -28,44 +28,58 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
   }
 
   return (
-    <section id="contact" ref={ref} className="container py-20">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl mx-auto"
-      >
-        <h2 className="text-section font-bold mb-12 text-gradient text-center">
-          Let's Build Something Amazing
-        </h2>
+    <section id="contact" ref={ref} className="py-20">
+      <div className="container">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="section-title text-center"
+        >
+          Get In Touch
+        </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-xl font-bold mb-6">Contact Details</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-secondary-slate">
-                  <MapPin className="w-5 h-5 text-primary-mint" />
-                  <span>Calicut, Kerala, India</span>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full glass border border-white/10">
+                    <Mail className="w-5 h-5 text-primary-mint" />
+                  </div>
+                  <div>
+                    <p className="text-secondary-slate text-sm">Email</p>
+                    <a
+                      href="mailto:sidharthnofficial@gmail.com"
+                      className="link"
+                    >
+                      sidharthnofficial@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 text-secondary-slate">
-                  <Mail className="w-5 h-5 text-primary-mint" />
-                  <a href="mailto:sidharthnofficial@gmail.com" className="link">
-                    sidharthnofficial@gmail.com
-                  </a>
+
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full glass border border-white/10">
+                    <Phone className="w-5 h-5 text-primary-mint" />
+                  </div>
+                  <div>
+                    <p className="text-secondary-slate text-sm">Phone</p>
+                    <a href="tel:+918848663072" className="link">
+                      +91 884 866 3072
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 text-secondary-slate">
-                  <Phone className="w-5 h-5 text-primary-mint" />
-                  <a href="tel:+918848663072" className="link">
-                    +91 884 866 3072
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 text-secondary-slate">
-                  <Calendar className="w-5 h-5 text-primary-mint" />
-                  <a href="#" className="link">
-                    Schedule a 30-minute meeting
-                  </a>
+
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full glass border border-white/10">
+                    <MapPin className="w-5 h-5 text-primary-mint" />
+                  </div>
+                  <div>
+                    <p className="text-secondary-slate text-sm">Location</p>
+                    <p className="text-white">Calicut, Kerala, India</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,9 +116,9 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
 
             <div>
               <h3 className="text-xl font-bold mb-4">Current Status</h3>
-              <div className="p-4 rounded-lg bg-primary-deep border border-primary-electric/20">
+              <div className="p-4 rounded-lg bg-dark-elevated border border-white/10">
                 <p className="text-secondary-slate">
-                  <span className="inline-block w-2 h-2 rounded-full bg-status-success mr-2"></span>
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
                   Open to AI Product Management roles.
                 </p>
               </div>
@@ -124,6 +138,7 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
                 placeholder="Your name"
               />
             </div>
+
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
                 Email
@@ -132,9 +147,10 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-lg glass border border-white/10 bg-transparent text-white placeholder-secondary-slate focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                placeholder="your@email.com"
+                placeholder="Your email"
               />
             </div>
+
             <div>
               <label
                 htmlFor="subject"
@@ -144,30 +160,30 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
               </label>
               <select
                 id="subject"
-                className="w-full px-4 py-3 rounded-lg glass border border-white/10 bg-transparent text-white placeholder-secondary-slate focus:outline-none focus:ring-2 focus:ring-primary-mint"
+                className="w-full px-4 py-3 rounded-lg glass border border-white/10 bg-black text-white focus:outline-none focus:ring-2 focus:ring-primary-mint appearance-none"
+                style={{
+                  backgroundImage:
+                    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E\")",
+                  backgroundPosition: "right 1rem center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "1em",
+                }}
               >
-                <option
-                  value=""
-                  disabled
-                  selected
-                  className="bg-secondary-midnight"
-                >
-                  Select a topic
+                <option value="" className="bg-black text-white">
+                  Select a subject
                 </option>
-                <option value="job" className="bg-secondary-midnight">
+                <option value="project" className="bg-black text-white">
+                  Project Inquiry
+                </option>
+                <option value="job" className="bg-black text-white">
                   Job Opportunity
                 </option>
-                <option value="project" className="bg-secondary-midnight">
-                  Project Collaboration
-                </option>
-                <option value="consulting" className="bg-secondary-midnight">
-                  Consulting
-                </option>
-                <option value="other" className="bg-secondary-midnight">
+                <option value="other" className="bg-black text-white">
                   Other
                 </option>
               </select>
             </div>
+
             <div>
               <label
                 htmlFor="message"
@@ -177,17 +193,23 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
               </label>
               <textarea
                 id="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg glass border border-white/10 bg-transparent text-white placeholder-secondary-slate focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                placeholder="Tell me about your project or opportunity"
+                rows={5}
+                className="w-full px-4 py-3 rounded-lg glass border border-white/10 bg-transparent text-white placeholder-secondary-slate focus:outline-none focus:ring-2 focus:ring-primary-mint resize-none"
+                placeholder="Your message"
               ></textarea>
             </div>
-            <button type="submit" className="button w-full">
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="w-full button mt-4"
+            >
               Send Message
-            </button>
+            </motion.button>
           </form>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
