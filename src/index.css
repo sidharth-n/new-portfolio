@@ -1,0 +1,125 @@
+/* Import the fonts */
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap")
+    format("woff2");
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .link {
+    @apply relative inline-block text-primary-mint hover:text-primary-mint/80 transition-colors duration-300
+           after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px]
+           after:bg-primary-mint after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .button {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+           font-semibold text-black bg-primary-mint
+           transform transition-all duration-300
+           hover:scale-[1.02] hover:shadow-lg
+           active:scale-[0.98];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-primary-mint;
+  }
+
+  .button.glass {
+    @apply bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white/20;
+  }
+
+  .text-hero {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  .text-subheading {
+    @apply text-lg md:text-xl;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-12 text-gradient;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  @apply fixed w-8 h-8 pointer-events-none mix-blend-difference z-50
+         border-2 border-white rounded-full
+         transition-transform duration-200 ease-out;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @apply transition-none animate-none;
+  }
+}
+
+/* CSS for the loader in the Spline component */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
