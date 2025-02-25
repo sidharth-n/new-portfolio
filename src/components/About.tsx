@@ -29,12 +29,14 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
         className="max-w-4xl mx-auto"
       >
         <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2">
-            <img
-              src="/images/headshot.png"
-              alt="Profile"
-              className="rounded-2xl w-full object-cover aspect-square"
-            />
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-xl">
+              <img
+                src="/images/headshot_cropped.jpg"
+                alt="Profile"
+                className="absolute w-full h-full object-cover object-[0%_0%]"
+              />
+            </div>
           </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-section font-bold mb-6 text-gradient">
