@@ -127,7 +127,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
             {/* Role availability - moved below text on mobile */}
             <div className="inline-block px-4 py-1 mb-6 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
               <span className="text-secondary-slate text-sm md:text-base">
-                Open to AI Product Management Roles
+                Open to AI Product Roles
               </span>
             </div>
 
