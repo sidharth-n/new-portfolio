@@ -41,20 +41,21 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
             transition={{ duration: 0.5 }}
             onAnimationComplete={() => setCountersVisible(true)}
           >
-            <div className="inline-block px-4 py-1 mb-4 md:mb-6 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
-              <span className="text-secondary-slate text-sm md:text-base">
-                Open to AI Product Management Roles
-              </span>
-            </div>
-
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               <span className="text-gradient">AI Product Innovator</span>
             </h1>
 
             <p className="text-base md:text-subheading text-secondary-slate mb-6 md:mb-8 max-w-xl">
-              Turning AI concepts into market-ready digital experiences that
-              engage users and solve real business problems
+              I love creating with AI, turning breakthrough technologies into
+              products people actually want to use.
             </p>
+
+            {/* Role availability - moved below text on mobile */}
+            <div className="inline-block px-4 py-1 mb-6 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+              <span className="text-secondary-slate text-sm md:text-base">
+                Open to AI Product Management Roles
+              </span>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
               <motion.a
@@ -130,7 +131,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
         {/* 3D scene - moved to first position on mobile */}
         <div
           className={`${
-            isMobile ? "h-[200px]" : "flex-1"
+            isMobile ? "h-[200px]" : "flex-1 pb-32"
           } relative pointer-events-auto order-1 md:order-2 mb-4 md:mb-0 md:mt-0`}
         >
           <SplineScene
