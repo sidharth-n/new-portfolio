@@ -25,6 +25,80 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
+  // Stats section component
+  const StatsSection = () => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-4 mb-8"
+    >
+      {[
+        {
+          prefix: "",
+          value: 100,
+          suffix: "K+",
+          label: "Users Reached",
+        },
+        { prefix: "", value: 20, suffix: "+", label: "Countries" },
+        {
+          prefix: "",
+          value: 7,
+          suffix: "",
+          label: "AI Products Launched",
+        },
+      ].map((stat, index) => (
+        <div
+          key={index}
+          className="text-center px-2 sm:px-3 md:px-5 py-2 md:py-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10"
+        >
+          <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-mint mb-0.5 md:mb-1">
+            {countersVisible ? (
+              <CountUp
+                start={0}
+                end={stat.value}
+                duration={2}
+                delay={0.2 * index}
+                separator=","
+                decimals={0}
+                decimal="."
+                prefix={stat.prefix}
+                suffix={stat.suffix}
+              />
+            ) : (
+              `${stat.prefix}0${stat.suffix}`
+            )}
+          </div>
+          <div className="text-xs md:text-sm text-secondary-slate">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </motion.div>
+  )
+
+  // Buttons section component
+  const ButtonsSection = () => (
+    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
+      <motion.a
+        href="#projects"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="button flex items-center justify-center gap-2 text-sm md:text-base py-2 md:py-3"
+      >
+        View Projects <ChevronRight className="w-4 h-4" />
+      </motion.a>
+      <motion.a
+        href="#contact"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="button glass text-sm md:text-base py-2 md:py-3"
+      >
+        Schedule a Call
+      </motion.a>
+    </div>
+  )
+
   return (
     <div className="w-full min-h-[20vh] relative overflow-hidden">
       {/* Spotlight only shown on desktop */}
@@ -57,74 +131,20 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
-              <motion.a
-                href="#projects"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="button flex items-center justify-center gap-2 text-sm md:text-base py-2 md:py-3"
-              >
-                View Projects <ChevronRight className="w-4 h-4" />
-              </motion.a>
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="button glass text-sm md:text-base py-2 md:py-3"
-              >
-                Schedule a Call
-              </motion.a>
-            </div>
-
-            {/* Stats - full width grid on mobile */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-4"
-            >
-              {[
-                {
-                  prefix: "",
-                  value: 100,
-                  suffix: "K+",
-                  label: "Users Reached",
-                },
-                { prefix: "", value: 20, suffix: "+", label: "Countries" },
-                {
-                  prefix: "",
-                  value: 7,
-                  suffix: "",
-                  label: "AI Products Launched",
-                },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center px-2 sm:px-3 md:px-5 py-2 md:py-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10"
-                >
-                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-mint mb-0.5 md:mb-1">
-                    {countersVisible ? (
-                      <CountUp
-                        start={0}
-                        end={stat.value}
-                        duration={2}
-                        delay={0.2 * index}
-                        separator=","
-                        decimals={0}
-                        decimal="."
-                        prefix={stat.prefix}
-                        suffix={stat.suffix}
-                      />
-                    ) : (
-                      `${stat.prefix}0${stat.suffix}`
-                    )}
-                  </div>
-                  <div className="text-xs md:text-sm text-secondary-slate">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
+            {/* Conditional rendering based on mobile/desktop */}
+            {isMobile ? (
+              // Mobile view: Stats above buttons
+              <>
+                <StatsSection />
+                <ButtonsSection />
+              </>
+            ) : (
+              // Desktop view: Buttons above stats
+              <>
+                <ButtonsSection />
+                <StatsSection />
+              </>
+            )}
           </motion.div>
         </div>
 
