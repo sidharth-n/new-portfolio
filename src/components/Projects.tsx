@@ -36,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       tech: ["React", "Three.js", "NLP", "Voice AI"],
       metrics: ["Enterprise Ready", "Custom Training"],
       timeline: "2024 - Ongoing",
-      links: { github: "#", live: "https://voaiz.com" },
+      links: { github: "#", live: "https://www.voaiz.com" },
     },
     {
       title: "OUTFITIFAI",
@@ -46,7 +46,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       tech: ["Three.js", "React", "AI Image Processing"],
       metrics: ["Multiple Retailers", "99% Size Accuracy"],
       timeline: "2024 - Ongoing",
-      links: { github: "#", live: "#" },
+      links: { github: "#", live: "https://outfitifai.vercel.app/" },
     },
     {
       title: "ANDROID KUNJAPPAN",
@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       tech: ["Three.js", "React Three Fiber", "NLP"],
       metrics: ["Real-time NLP", "3D Animation"],
       timeline: "2022",
-      links: { github: "#", live: "#" },
+      links: { github: "#", live: "https://kunjappan-live.netlify.app/" },
     },
     {
       title: "ROASTYOURFRIEND",
@@ -66,7 +66,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       tech: ["React", "Voice AI", "WebRTC", "TailwindCSS"],
       metrics: ["8,000+ users in one week", "GTA-inspired UX"],
       timeline: "2024",
-      links: { github: "#", live: "https://roast2-0.vercel.app" },
+      links: { github: "#", live: "https://www.roastyourfriend.fun" },
     },
     {
       title: "TALKTOJESUS",
@@ -123,7 +123,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
                       href={project.links.github}
                       className="p-2 rounded-full hover:bg-white/10 transition-colors"
                     >
-                      <Github className="w-5 h-5" />
+                      {/*  <Github className="w-5 h-5" /> */}
                     </a>
                     <a
                       href={project.links.live}
