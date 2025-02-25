@@ -88,7 +88,7 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
               <h3 className="text-xl font-bold mb-6">Connect</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://linkedin.com/in/sidharthn"
+                  href="https://www.linkedin.com/in/sidharth-n-52828b226"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full glass border border-white/10 hover:scale-110 transition-transform"
@@ -96,7 +96,7 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com/sidharthn"
+                  href="https://github.com/sidharth-n"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full glass border border-white/10 hover:scale-110 transition-transform"
@@ -104,7 +104,7 @@ const Contact: React.FC<ContactProps> = ({ setActiveSection }) => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://twitter.com/sidharthn"
+                  href="https://x.com/sid_ai_dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full glass border border-white/10 hover:scale-110 transition-transform"
