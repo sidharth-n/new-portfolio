@@ -8,7 +8,10 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  })
 
   React.useEffect(() => {
     if (inView) setActiveSection("projects")
@@ -78,11 +81,15 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
   ]
 
   return (
-    <section id="projects" ref={ref} className="container py-20">
+    <section
+      id="projects"
+      ref={ref}
+      className="container py-16 motion-optimize"
+    >
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.4 }}
         className="max-w-6xl mx-auto"
       >
         <h2 className="text-section font-bold mb-12 text-gradient text-center">
@@ -92,6 +99,9 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
               className="rounded-2xl overflow-hidden glass border border-white/10 flex flex-col h-full"
             >

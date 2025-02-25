@@ -7,7 +7,10 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
-  const [ref, inView] = useInView({ threshold: 0.5 })
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  })
 
   React.useEffect(() => {
     if (inView) setActiveSection("home")

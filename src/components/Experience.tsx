@@ -61,11 +61,15 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
   ]
 
   return (
-    <section id="experience" ref={ref} className="container py-20">
+    <section
+      id="experience"
+      ref={ref}
+      className="container py-16 motion-optimize"
+    >
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.4 }}
         className="max-w-4xl mx-auto"
       >
         <h2 className="text-section font-bold mb-12 text-gradient text-center">

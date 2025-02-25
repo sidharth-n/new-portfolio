@@ -123,3 +123,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add this to your global CSS */
+section {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Ensure content is always minimally visible */
+.motion-optimize[style*="opacity: 0"] {
+  opacity: 0.1 !important; /* Never completely invisible */
+}
+
+/* Ensure smoother transitions */
+.motion-optimize {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}

@@ -13,7 +13,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("home")
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen scroll-smooth">
       <div className="mx-auto">
         <Header activeSection={activeSection} />
         <Hero setActiveSection={setActiveSection} />

@@ -27,15 +27,18 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
 
   return (
     <div className="w-full min-h-[20vh] relative overflow-hidden">
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
+      {/* Spotlight only shown on desktop */}
+      {!isMobile && (
+        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
+      )}
 
       <div className="flex h-full flex-col md:flex-row">
-        {/* Content side - full width on mobile */}
-        <div className="flex-1 p-4 md:p-8 relative z-10 flex flex-col justify-center">
+        {/* Content side - moved to second position on mobile */}
+        <div className="flex-1 p-4 md:p-8 relative z-10 flex flex-col justify-center order-2 md:order-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             onAnimationComplete={() => setCountersVisible(true)}
           >
             <div className="inline-block px-4 py-1 mb-4 md:mb-6 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
@@ -76,11 +79,16 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-4"
             >
               {[
-                { prefix: "", value: 55, suffix: "K+", label: "Users Reached" },
+                {
+                  prefix: "",
+                  value: 100,
+                  suffix: "K+",
+                  label: "Users Reached",
+                },
                 { prefix: "", value: 20, suffix: "+", label: "Countries" },
                 {
                   prefix: "",
@@ -119,11 +127,11 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
           </motion.div>
         </div>
 
-        {/* 3D scene - reduced height on mobile */}
+        {/* 3D scene - moved to first position on mobile */}
         <div
           className={`${
-            isMobile ? "h-[300px]" : "flex-1"
-          } relative pointer-events-auto mt-4 md:mt-0`}
+            isMobile ? "h-[200px]" : "flex-1"
+          } relative pointer-events-auto order-1 md:order-2 mb-4 md:mb-0 md:mt-0`}
         >
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
