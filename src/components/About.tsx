@@ -31,7 +31,7 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=800&q=80"
+              src="/images/headshot.png"
               alt="Profile"
               className="rounded-2xl w-full object-cover aspect-square"
             />
