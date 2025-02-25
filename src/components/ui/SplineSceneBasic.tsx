@@ -119,7 +119,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
               <span className="text-gradient">AI Product Innovator</span>
             </h1>
 
-            <p className="text-sm md:text-subheading text-secondary-slate mb-6 md:mb-8 max-w-xl">
+            <p className="text-base md:text-subheading text-secondary-slate mb-6 md:mb-8 max-w-xl">
               I love creating with AI, turning breakthrough technologies into
               products people actually want to use.
             </p>
