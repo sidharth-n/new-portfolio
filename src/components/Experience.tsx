@@ -25,7 +25,6 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
         "Defined product requirements and technical roadmap for real-time 3D reconstruction AI systems on autonomous drones",
         "Collaborated with ML engineers to improve reconstruction accuracy by 40% while reducing processing latency",
         "Conducted market research to identify product-market fit opportunities in drone automation and robotics",
-        "Translated complex technical capabilities into clear product specs and go-to-market strategies",
       ],
     },
     {
@@ -37,21 +36,52 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
       achievements: [
         "Architected front-end systems for AI-powered video generation platform serving enterprise clients across Southeast Asia",
         "Built reusable component library with React and Tailwind CSS, reducing development time by 30%",
-        "Implemented Three.js visualizations and real-time video rendering with Remotion for AI video generation",
-        "Collaborated with product and ML teams to integrate generative AI capabilities into user workflows",
+        "Implemented Three.js visualizations and real-time video rendering with Remotion",
       ],
     },
     {
       company: "Freelance AI Consulting",
-      role: "AI Product Builder & Consultant",
+      role: "AI Product Builder",
       period: "2023 - Present",
       type: "Independent",
       logo: <Briefcase className="w-5 h-5" />,
       achievements: [
         "Generated $10K+ revenue building custom AI applications including LLM chatbots and automation systems",
-        "Consulted for Venice.ai (Erik Voorhees' venture), developing AI agent prototypes for crypto-AI integration",
-        "Shipped 50+ production AI products including 3D conversational bots and generative AI content creators",
-        "Conducted rapid prototyping and MVP testing to validate AI product ideas with real users",
+        "Consulted for Venice.ai, developing AI agent prototypes for crypto-AI integration",
+        "Shipped 50+ production AI products including 3D conversational bots and generative AI creators",
+      ],
+    },
+    {
+      company: "Pindfresh Hydroponics",
+      role: "Business Consultant",
+      period: "Jul 2021 - Oct 2021",
+      type: "Consulting",
+      logo: <Building2 className="w-5 h-5" />,
+      achievements: [
+        "Led Amazon sales department, executing digital marketing campaigns that increased online revenue by 35%",
+        "Analyzed business operations and implemented data-driven improvement strategies",
+      ],
+    },
+    {
+      company: "Mypup Community",
+      role: "Co-founder",
+      period: "Apr 2020 - Jun 2021",
+      type: "Startup",
+      logo: <Rocket className="w-5 h-5" />,
+      achievements: [
+        "Created a worldwide platform connecting passionate individuals with industry experts",
+        "Built a community of over 5,000 members across India",
+      ],
+    },
+    {
+      company: "Scarab Tutors",
+      role: "Co-founder",
+      period: "Jun 2018 - Mar 2020",
+      type: "Startup",
+      logo: <Briefcase className="w-5 h-5" />,
+      achievements: [
+        "Co-founded an educational community that expanded to 3 cities in Kerala",
+        "Created employment opportunities for 200+ college students through part-time tutoring",
       ],
     },
   ]

@@ -16,34 +16,34 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
 
   const achievements = [
     {
-      icon: <Rocket className="w-5 h-5" />,
-      title: "Antler-Funded Startup",
-      description: "Core team member building AI video generation platform",
+      icon: <Zap className="w-5 h-5" />,
+      title: "Venice.ai Prototypes",
+      description: "Built 6 AI prototypes working closely with Erik Voorhees",
+    },
+    {
+      icon: <Trophy className="w-5 h-5" />,
+      title: "Agentathon 3rd Place",
+      description: "International crypto-AI hackathon by Safe Global",
     },
     {
       icon: <Users className="w-5 h-5" />,
       title: "100K+ Users Reached",
-      description: "Shipped AI products that scaled to global audiences",
+      description: "Viral AI products featured in Indian Express",
     },
     {
-      icon: <DollarSign className="w-5 h-5" />,
-      title: "$12K+ Startup Revenue",
-      description: "Generated revenue within 6 months as student founder",
-    },
-    {
-      icon: <Trophy className="w-5 h-5" />,
-      title: "Multiple Hackathon Wins",
-      description: "Including 3rd at Safe Global, 1st at Techstars",
+      icon: <Rocket className="w-5 h-5" />,
+      title: "Antler-Funded Startup",
+      description: "Core team at AI video generation platform",
     },
     {
       icon: <Code className="w-5 h-5" />,
       title: "50+ AI Projects",
-      description: "Always shipping, always experimenting with AI",
+      description: "From LLM chatbots to 3D conversational agents",
     },
     {
-      icon: <Zap className="w-5 h-5" />,
-      title: "Venice.ai Consulting",
-      description: "Worked with Erik Voorhees' AI venture",
+      icon: <DollarSign className="w-5 h-5" />,
+      title: "$12K+ Revenue",
+      description: "As student founder within 6 months",
     },
   ]
 
@@ -83,20 +83,20 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
               
               <div className="space-y-4 text-text-secondary text-body-lg leading-relaxed mb-8">
                 <p>
-                  <span className="text-white font-medium">AI Product Manager with 4 years building generative AI products from 0-to-1.</span> I've 
+                  <span className="text-white font-medium">Front-End Architect turned AI Product Builder with 4+ years of experience.</span> I've 
                   been a core team member at an Antler-funded startup, shipped viral consumer 
-                  apps reaching 100K+ users, and consulted for deep-tech and crypto-AI ventures.
+                  apps reaching 100K+ users (featured in Indian Express), and consulted for 
+                  deep-tech and crypto-AI ventures.
                 </p>
                 <p>
-                  My superpower is bridging the gap between cutting-edge AI capabilities and 
-                  real user value. I understand the tech deeply enough to have meaningful 
-                  conversations with engineers, while staying obsessed with what actually 
-                  matters — shipping products people love.
+                  I've worked closely with <span className="text-primary font-medium">Erik Voorhees</span> (ShapeShift founder), 
+                  building 6 prototypes for his Venice.ai ecosystem. I also won <span className="text-accent font-medium">3rd place 
+                  at the Safe Global Agentathon</span> — an international crypto-AI hackathon.
                 </p>
                 <p>
-                  I spend hours daily staying updated with the entire AI ecosystem. From new 
-                  model releases to emerging use cases — I'm always experimenting, always learning, 
-                  always building.
+                  My superpower is bridging cutting-edge AI capabilities with real user value. 
+                  I understand the tech deeply enough to work with ML engineers, while staying 
+                  obsessed with what actually matters — shipping products people love.
                 </p>
               </div>
             </div>

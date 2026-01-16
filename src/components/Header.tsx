@@ -66,12 +66,13 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 </a>
               ))}
               <motion.a
-                href="#contact"
+                href="/SIdharth_resume_2026.pdf"
+                download
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="ml-4 button text-body-sm px-5 py-2"
               >
-                Hire Me
+                Download CV
               </motion.a>
             </nav>
 
@@ -117,11 +118,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/SIdharth_resume_2026.pdf"
+                download
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 button text-center py-3"
               >
-                Hire Me
+                Download CV
               </a>
             </nav>
           </motion.div>

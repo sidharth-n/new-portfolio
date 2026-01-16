@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Sparkles, Trophy, Rocket, Award, ArrowRight } from "lucide-react"
+import { Sparkles, Trophy, Rocket, ArrowRight, Newspaper } from "lucide-react"
 import { SplineScene } from "./splite"
 import { Spotlight } from "./spotlight"
 import CountUp from "react-countup"
@@ -53,12 +53,12 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6"
+      className="grid grid-cols-4 gap-2 sm:gap-3 mb-6 max-w-sm"
     >
       {[
-        { value: 3, suffix: "+", label: "Years Frontend" },
-        { value: 100, suffix: "K+", label: "Users Reached" },
-        { value: 50, suffix: "+", label: "AI Projects" },
+        { value: 4, suffix: "+", label: "Years Exp" },
+        { value: 100, suffix: "K+", label: "Users" },
+        { value: 50, suffix: "+", label: "Projects" },
         { value: 10, prefix: "$", suffix: "K+", label: "Revenue" },
       ].map((stat, index) => (
         <div
@@ -94,12 +94,13 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
       className="flex flex-col sm:flex-row gap-3 mb-8"
     >
       <motion.a
-        href="#projects"
+        href="/SIdharth_resume_2026.pdf"
+        download
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className="button group"
       >
-        View Case Studies
+        Download CV
         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
       </motion.a>
       <motion.a
@@ -113,23 +114,21 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
     </motion.div>
   )
 
-  // Recent highlight
-  const RecentHighlight = () => (
+  // Featured badge - styled like credibility badges
+  const FeaturedBadge = () => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20"
+      className="badge"
     >
-      <Award className="w-4 h-4 text-accent" />
-      <span className="text-body-sm text-text-secondary">
-        <span className="text-accent font-medium">3rd Place</span> — Safe Global Agentathon 2025
-      </span>
+      <Newspaper className="w-3 h-3" />
+      Featured in Indian Express
     </motion.div>
   )
 
   return (
-    <div className="w-full min-h-screen relative">
+    <div className="w-full min-h-screen relative flex items-center">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent opacity-50" />
       
@@ -137,7 +136,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
       )}
 
-      <div className="flex h-full flex-col md:flex-row">
+      <div className="w-full flex flex-col md:flex-row md:items-center">
         {/* Content side */}
         <div className="flex-1 p-4 sm:p-6 md:p-8 lg:p-12 relative z-10 flex flex-col justify-center order-2 md:order-1">
           <motion.div
@@ -179,20 +178,22 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
             {/* CTA Buttons */}
             <ButtonsSection />
 
-            {/* Recent highlight */}
-            <RecentHighlight />
+            {/* Featured badge */}
+            <FeaturedBadge />
           </motion.div>
         </div>
 
-        {/* 3D scene */}
+        {/* 3D scene - fixed dimensions to prevent arm cropping */}
         <div
           className={`${
-            isMobile ? "h-[220px]" : "flex-1 min-h-[400px]"
-          } relative pointer-events-auto order-1 md:order-2`}
+            isMobile ? "h-[300px]" : "flex-1"
+          } relative pointer-events-auto order-1 md:order-2 flex items-center justify-center`}
         >
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"
+            width={isMobile ? "350px" : "600px"}
+            height={isMobile ? "300px" : "600px"}
           />
         </div>
       </div>
