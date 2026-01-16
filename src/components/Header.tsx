@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 </a>
               ))}
               <motion.a
-                href="/SIdharth_resume_2026.pdf"
+                href="/resume.pdf"
                 download
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 </a>
               ))}
               <a
-                href="/SIdharth_resume_2026.pdf"
+                href="/resume.pdf"
                 download
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 button text-center py-3"

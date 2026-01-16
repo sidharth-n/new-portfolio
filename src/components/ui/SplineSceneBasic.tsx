@@ -93,7 +93,7 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
       className="flex flex-col sm:flex-row gap-3 mb-8"
     >
       <motion.a
-        href="/SIdharth_resume_2026.pdf"
+        href="/resume.pdf"
         download
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
