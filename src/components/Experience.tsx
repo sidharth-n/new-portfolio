@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Briefcase } from "lucide-react"
+import { Briefcase, Building2, Rocket, Calendar } from "lucide-react"
 import { useInView } from "react-intersection-observer"
 
 interface ExperienceProps {
@@ -8,7 +8,7 @@ interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
   React.useEffect(() => {
     if (inView) setActiveSection("experience")
@@ -16,46 +16,42 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
 
   const experiences = [
     {
-      company: "STORYBRAIN",
+      company: "Cognifluenz DeepTech",
+      role: "AI Specialist Consultant",
+      period: "Apr 2025 - Sep 2025",
+      type: "Contract",
+      logo: <Building2 className="w-5 h-5" />,
+      achievements: [
+        "Defined product requirements and technical roadmap for real-time 3D reconstruction AI systems on autonomous drones",
+        "Collaborated with ML engineers to improve reconstruction accuracy by 40% while reducing processing latency",
+        "Conducted market research to identify product-market fit opportunities in drone automation and robotics",
+        "Translated complex technical capabilities into clear product specs and go-to-market strategies",
+      ],
+    },
+    {
+      company: "Storybrain",
       role: "Front-End Architect",
-      period: "Jul 2022 - Jul 2024",
+      period: "Jul 2021 - Aug 2024",
+      type: "Antler-Funded (SG3)",
+      logo: <Rocket className="w-5 h-5" />,
       achievements: [
-        "Architected front-end systems for an AI video generation platform with enterprise clients including Flipkart and Housing.com",
-        "Built reusable components with React and Tailwind CSS, reducing development time by 30% for new features",
-        "Implemented Three.js visualizations that increased user engagement by 25% across platform",
-
-        "Led cross-functional teams to deliver high-impact features on aggressive timelines",
+        "Architected front-end systems for AI-powered video generation platform serving enterprise clients across Southeast Asia",
+        "Built reusable component library with React and Tailwind CSS, reducing development time by 30%",
+        "Implemented Three.js visualizations and real-time video rendering with Remotion for AI video generation",
+        "Collaborated with product and ML teams to integrate generative AI capabilities into user workflows",
       ],
     },
     {
-      company: "PINDFRESH HYDROPONICS",
-      role: "Business Consultant",
-      period: "Jul 2021 - Oct 2021",
+      company: "Freelance AI Consulting",
+      role: "AI Product Builder & Consultant",
+      period: "2023 - Present",
+      type: "Independent",
+      logo: <Briefcase className="w-5 h-5" />,
       achievements: [
-        "Analyzed business operations and implemented data-driven improvement strategies across departments",
-        "Led Amazon sales department, creating and executing digital marketing campaigns that increased online revenue by 35%",
-        "Developed and marketed new hydroponic systems that expanded market reach across India",
-      ],
-    },
-    {
-      company: "MYPUP COMMUNITY",
-      role: "Co-founder",
-      period: "Apr 2020 - Jun 2021",
-      achievements: [
-        "Created a worldwide platform connecting passionate individuals with industry experts",
-        "Conducted online industry-level workshops for students in various fields",
-        "Built a community of over 5,000 members across india",
-      ],
-    },
-    {
-      company: "SCARAB TUTORS",
-      role: "Co-founder",
-      period: "Jun 2018 - Mar 2020",
-      achievements: [
-        "Co-founded an educational community that expanded to 3 cities in Kerala, India",
-        "Created employment opportunities for 200+ college students through part-time tutoring",
-        "Personally tutored 50+ high-school students in physics and mathematics",
-        "Developed systems for tutor training and quality assurance across multiple locations",
+        "Generated $10K+ revenue building custom AI applications including LLM chatbots and automation systems",
+        "Consulted for Venice.ai (Erik Voorhees' venture), developing AI agent prototypes for crypto-AI integration",
+        "Shipped 50+ production AI products including 3D conversational bots and generative AI content creators",
+        "Conducted rapid prototyping and MVP testing to validate AI product ideas with real users",
       ],
     },
   ]
@@ -64,45 +60,71 @@ const Experience: React.FC<ExperienceProps> = ({ setActiveSection }) => {
     <section
       id="experience"
       ref={ref}
-      className="container py-16 motion-optimize"
+      className="py-20 md:py-28"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.4 }}
-        className="max-w-4xl mx-auto"
-      >
-        <h2 className="text-section font-bold mb-12 text-gradient text-center">
-          Professional Journey
-        </h2>
-        <div className="space-y-12">
-          {experiences.map((experience, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.02 }}
-              className="p-8 rounded-2xl glass border border-white/10"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <Briefcase className="w-6 h-6 text-primary-mint" />
-                <div>
-                  <h3 className="text-xl font-bold">{experience.company}</h3>
-                  <p className="text-secondary-slate">
-                    {experience.role} | {experience.period}
-                  </p>
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
+          {/* Section header */}
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="section-title">Professional Journey</h2>
+            <p className="text-text-secondary text-body-lg max-w-2xl mx-auto">
+              4+ years building AI products from 0-to-1, from startup core teams to enterprise consulting
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="space-y-6">
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="group"
+              >
+                <div className="card hover:border-primary/20">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
+                    <div className="flex items-center gap-4 flex-1">
+                      <div className="p-3 rounded-xl bg-primary/10 text-primary">
+                        {experience.logo}
+                      </div>
+                      <div>
+                        <h3 className="text-heading font-bold text-white group-hover:text-primary transition-colors">
+                          {experience.company}
+                        </h3>
+                        <p className="text-body text-text-secondary">{experience.role}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 sm:text-right">
+                      <Calendar className="w-4 h-4 text-text-muted sm:hidden" />
+                      <div>
+                        <p className="text-body-sm text-text-muted">{experience.period}</p>
+                        <span className="badge-ghost text-xs">{experience.type}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Achievements */}
+                  <ul className="space-y-2 ml-0 sm:ml-16">
+                    {experience.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-3 text-body-sm text-text-secondary">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-              <ul className="space-y-2 text-secondary-slate">
-                {experience.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-mint mt-2" />
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   )
 }
