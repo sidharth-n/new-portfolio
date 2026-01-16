@@ -53,17 +53,16 @@ export function SplineSceneBasic({ setActiveSection }: SplineHeroProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="grid grid-cols-4 gap-2 sm:gap-3 mb-6 max-w-sm"
+      className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 w-fit"
     >
       {[
         { value: 4, suffix: "+", label: "Years Exp" },
         { value: 100, suffix: "K+", label: "Users" },
         { value: 50, suffix: "+", label: "Projects" },
-        { value: 10, prefix: "$", suffix: "K+", label: "Revenue" },
       ].map((stat, index) => (
         <div
           key={index}
-          className="stat-card group hover:border-primary/30 transition-all duration-300"
+          className="stat-card group hover:border-primary/30 transition-all duration-300 px-4 py-3"
         >
           <div className="stat-value">
             {countersVisible ? (
