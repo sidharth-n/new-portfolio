@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
         { icon: <Users className="w-4 h-4" />, value: "75K users", label: "in 17 days" },
         { icon: <Newspaper className="w-4 h-4" />, value: "Featured", label: "Indian Express" },
       ],
-      link: "https://santacallingai.com",
+      link: "https://www.newindianexpress.com/states/kerala/2024/Dec/22/ho-ho-ho-this-xmas-spread-joy-with-personalised-santa-greetings",
       featured: true,
     },
     {
@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       metrics: [
         { icon: <TrendingUp className="w-4 h-4" />, value: "99%", label: "Size Accuracy" },
       ],
-      link: "https://outfitifai.vercel.app/",
+      link: "#",
     },
     {
       title: "RoastYourFriend",
