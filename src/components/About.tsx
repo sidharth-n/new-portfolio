@@ -65,15 +65,13 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
               className="w-full lg:w-2/5 flex justify-center"
             >
               <div className="relative">
-                <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-2xl">
                   <img
                     src="/images/headshot_cropped.jpg"
                     alt="Sidharth N"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                {/* Decorative elements */}
-                <div className="absolute -z-10 -bottom-4 -right-4 w-64 h-64 sm:w-72 sm:h-72 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20" />
               </div>
             </motion.div>
 
