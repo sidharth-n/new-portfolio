@@ -81,7 +81,7 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
               
               <div className="space-y-4 text-text-secondary text-body-lg leading-relaxed mb-8">
                 <p>
-                  <span className="text-white font-medium">Front-End Architect turned AI Product Builder with 4+ years of experience.</span> I've 
+                  <span className="text-white font-medium">Front-End Architect/AI dev turned AI Product Manager with 4+ years of experience.</span> I've 
                   been a core team member at an Antler-funded startup, shipped viral consumer 
                   apps reaching 100K+ users (featured in Indian Express), and consulted for 
                   deep-tech and crypto-AI ventures.
