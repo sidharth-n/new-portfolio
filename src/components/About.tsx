@@ -87,7 +87,7 @@ const About: React.FC<AboutProps> = ({ setActiveSection }) => {
                   deep-tech and crypto-AI ventures.
                 </p>
                 <p>
-                  I've worked closely with <a href="https://x.com/erikvoorhees" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline cursor-pointer">Erik Voorhees</a> (ShapeShift founder), 
+                  I've worked closely with <a href="https://x.com/erikvoorhees" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline cursor-pointer">Erik Voorhees</a> (Bitcoin OG), 
                   building 6 prototypes for his Venice.ai ecosystem. I also won <span className="text-accent font-medium">3rd place 
                   at the <a href="https://x.com/safe" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">Safe Global</a> Agentathon</span> — an international crypto-AI hackathon.
                 </p>
