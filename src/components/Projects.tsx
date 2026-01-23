@@ -66,7 +66,7 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveSection }) => {
       metrics: [
         { icon: <Users className="w-4 h-4" />, value: "8K+", label: "users in 1 week" },
       ],
-      link: "https://www.roastyourfriend.fun",
+      link: "https://roast2-0.vercel.app/",
     },
     {
       title: "Android Kunjappan",
