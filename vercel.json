@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/cartboss-strategy-2026",
+      "destination": "https://cartboss-pitch.vercel.app/cartboss-strategy-2026/"
+    },
+    {
+      "source": "/cartboss-strategy-2026/:match*",
+      "destination": "https://cartboss-pitch.vercel.app/cartboss-strategy-2026/:match*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
